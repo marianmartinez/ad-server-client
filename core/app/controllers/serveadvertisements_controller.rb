@@ -1,6 +1,7 @@
 class ServeadvertisementsController < ApplicationController
 
 	 def process_request
+	 	binding.pry
 	 	render :json => { newAdvertisement: get_advertisement }
 	 end
 

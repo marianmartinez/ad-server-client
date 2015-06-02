@@ -11,20 +11,20 @@
   <img id="banner" src="" />
 
 		<script>
-			$( document ).ready(function() {
-		    
-		    var url1 = "./response.json";
-		    var url2 = "./response1.json";
+			$( document ).ready(function() 
+			{
+		        var url1 = "./response.json";
+			    var url2 = "./response1.json";
 
-			$.ajax({
-			  method: "GET",
-			  url: "localhost:3000/"
-			})
-			.done(function( data ) {
-		      var imgSource = data.newAdvertisement;
-		      $('#banner').attr("src", imgSource);
-		 	});
-		});
+				$.ajax({
+				  method: "GET",
+				  url: "localhost:3000/"
+				})
+				.done(function( data ) {
+			      var imgSource = data.newAdvertisement;
+			      $('#banner').attr("src", imgSource);
+			 	});
+		    });
 		</script>
 
 </body>
