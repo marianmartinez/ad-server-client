@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <title>Ad server</title>
+</head>
+<body>
+  <img id="banner" src="" />
+
+		<script>
+			$( document ).ready(function() {
+		    
+		    var url1 = "./response.json";
+		    var url2 = "./response1.json";
+
+			$.ajax({
+			  method: "GET",
+			  url: "localhost:3000/"
+			})
+			.done(function( data ) {
+		      var imgSource = data.newAdvertisement;
+		      $('#banner').attr("src", imgSource);
+		 	});
+		});
+		</script>
+
+</body>
+</html>
